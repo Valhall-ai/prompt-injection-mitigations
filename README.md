@@ -4,7 +4,7 @@ A comprehensive collection of prompt injection mitigation techniques and suites.
 
 # But First, Some Words of Warning...
 
-[*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd)
+> "[*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd)" - [Jonathan Todd (Me)](https://www.linkedin.com/in/jonathanktodd/)
 
 But don't just take it from me:
 
