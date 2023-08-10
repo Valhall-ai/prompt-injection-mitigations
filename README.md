@@ -3,35 +3,6 @@ A collection of prompt injection mitigation techniques.
 
 ---
 
-# 🏷️ Mitigation Categories
-It's useful to break down technique traits into categories to better understand how each technique is interacting with the threat as well as the time and cost trade-offs involved.
-
-## 🔁 Active vs 🚦 Passive
-Active mitigation techniques involve proactive steps to neutralize a potential attack whereas passive techniques block attacks by simply not allowing them to proceed.
-
-## 🕰️ High Time Overhead vs ⚡ Low Time Overhead
-Mitigations involving LLM inputs, especially in multiple synchronous steps can require the process to take longer compared to non-LLM mitigations or single / asynchronously executed LLM prompts.
-
-## 💰 High Cost vs 💲 Low Cost
-Mitigation techniques which involve numerous additional LLM prompt steps are more resource-intensive requiring greater cost overhead relative to low cost techniques involving a single added LLM prompt or none at all.
-
-## 🛡️ Preventive vs ⚠️ Reactive
-Preventive techniques try to stop an attack before it occurs while reactive techniques respond to an attack after it has happened, mitigating the impacts.
-
-## 🧠 Predictive vs 🪂 Responsive
-Predictive techniques rely on modeling and forecasting to spot and stop potential attacks whereas responsive methods respond to a detected threat.
-
-## 📥 Input-focused vs 📤 Output-focused
-Input-focused techniques seek to sanitize or control the input to prevent malicious use while output-focused techniques focus on turning manipulated outputs into less valuable ones for attackers.
-
-## 🌐 Generic vs 🔬 Specific
-Generic techniques can be applied broadly to tackle different types of attacks while specific techniques specialize in thwarting a particular type of attack.
-
-## 🤖 Automated vs 👥 Manual
-Automated mitigation will continue working with no human intervention whereas manual mitigation techniques require human intervention on a continuous basis, for example to introduce new threat signatures.
-
----
-
 # Techniques
 
 ## 💬 Paraphrasing
@@ -75,3 +46,32 @@ An LLM prompt containing information about common prompt injection methods can a
 ## 🌈 Model Diversification
 Introduce diversity by incorporating different LLM models. If two models provide diametrically opposite outputs in sentiment analysis, we can consider rejecting the prompt or retrying until the outputs are similar. This technique can work as a mitigation layer or to improve the other mitigation layers. 
 `🚦 Passive` `⚠️ Reactive` `📤 Output-focused` `🌐 Generic` `🤖 Automated` `⚡ Low Time Overhead` `💰 High Cost`
+
+---
+
+# 🏷️ Mitigation Categories
+It's useful to break down technique traits into categories to better understand how each technique is interacting with the threat as well as the time and cost trade-offs involved.
+
+## 🔁 Active vs 🚦 Passive
+Active mitigation techniques involve proactive steps to neutralize a potential attack whereas passive techniques block attacks by simply not allowing them to proceed.
+
+## 🕰️ High Time Overhead vs ⚡ Low Time Overhead
+Mitigations involving LLM inputs, especially in multiple synchronous steps can require the process to take longer compared to non-LLM mitigations or single / asynchronously executed LLM prompts.
+
+## 💰 High Cost vs 💲 Low Cost
+Mitigation techniques which involve numerous additional LLM prompt steps are more resource-intensive requiring greater cost overhead relative to low cost techniques involving a single added LLM prompt or none at all.
+
+## 🛡️ Preventive vs ⚠️ Reactive
+Preventive techniques try to stop an attack before it occurs while reactive techniques respond to an attack after it has happened, mitigating the impacts.
+
+## 🧠 Predictive vs 🪂 Responsive
+Predictive techniques rely on modeling and forecasting to spot and stop potential attacks whereas responsive methods respond to a detected threat.
+
+## 📥 Input-focused vs 📤 Output-focused
+Input-focused techniques seek to sanitize or control the input to prevent malicious use while output-focused techniques focus on turning manipulated outputs into less valuable ones for attackers.
+
+## 🌐 Generic vs 🔬 Specific
+Generic techniques can be applied broadly to tackle different types of attacks while specific techniques specialize in thwarting a particular type of attack.
+
+## 🤖 Automated vs 👥 Manual
+Automated mitigation will continue working with no human intervention whereas manual mitigation techniques require human intervention on a continuous basis, for example to introduce new threat signatures.
