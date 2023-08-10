@@ -13,7 +13,7 @@ Ask an LLM to paraphrase the prompt while retaining as much detail as possible. 
 ---
 
 ## 🕵️‍♂️ Threat Intel Driven Sanitization
-Based on threat intel, use string searches, vector databases, and embeddings to match known injection techniques. Upon detection of matching strings, remove them from the prompt. We should not indicate to the user that the injection has been mitigated as this information could potentially aid attackers.
+Based on threat intel, use string searches, vector databases, and embeddings to match known injection techniques. Upon detection of similar strings, remove them from the prompt.
 
 `🔁 Active` `🛡️ Preventive` `📥 Input-focused` `🔬 Specific` `👥 Manual` `⚡ Low Time Overhead` `💰 High Cost`
 
