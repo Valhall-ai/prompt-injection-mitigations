@@ -1,84 +1,69 @@
 # 🛡️ Prompt Injection Mitigations
-
 A collection of prompt injection mitigation techniques.
 
 ---
+
 # 🏷️ Mitigation Categories
+It's useful to break down technique traits into categories to better understand how each technique is interacting with the threat as well as the time and cost trade-offs involved.
 
-These are not mutually exclusive, meaning one technique can fit into multiple categories of mitigation.
+## 🔁 Active vs 🚦 Passive
+Active mitigation techniques involve proactive steps to neutralize a potential attack whereas passive techniques block attacks by simply not allowing them to proceed.
 
-## 🔒 Disruption
+## 🛡️ Preventive vs ⚠️ Reactive
+Preventive techniques try to stop an attack before it occurs while reactive techniques respond to an attack after it has happened, mitigating the impacts.
 
-Disruption mitigation techniques deteriorate the attacker's ability to control output state, so that even if the attacker succeeds in subverting the prompt's intended output limitations, the subverted state is less useful to the attacker.
+## 🧠 Predictive vs 🪂 Responsive
+Predictive techniques rely on modeling and forecasting to spot and stop potential attacks whereas responsive methods respond to a detected threat.
 
-`🔒 Disruption`
+## 📥 Input-focused vs 📤 Output-focused
+Input-focused techniques seek to sanitize or control the input to prevent malicious use while output-focused techniques focus on turning manipulated outputs into less valuable ones for attackers.
 
-**Reliability:** Exploits that sometimes succeed but fail to work reliably can be undesireable for attackers who wish to avoid failures which might alert defenders to the attack prematurely. Dynamically generated mitigation strategies (per-session) could make it exceptionally difficult to achieve reliable subversion.
+## 🌐 Generic vs 🔬 Specific
+Generic techniques can be applied broadly to tackle different types of attacks while specific techniques specialize in thwarting a particular type of attack.
 
-**Control:** If injection does achieve some manner of subversion but the outcome isn’t controlled (because of mitigations) the attacker’s desired target state may not be within reach.
+## 🤖 Automated vs 👥 Manual
+Automated mitigation is driven by algorithms and code with little to no human intervention whereas manual mitigation techniques require human intervention, interpretation, or analysis.
 
-## 🧽 Sanitization
+---
 
-Sanitization mitigation techniques deteriorate the attacker's ability to control the input state, making the likelihood of successful subversion lower. 
-
-`🧽 Sanitization`
-
-**Input:** If the attacker’s input is affected in such a way that certain characters or patterns required for the injection technique never reach any LLM (for example, identification via Regex, traditional NLP, or other code), the attack may fail.
-
-**Intermediate I/O:** Input sanitization, but applied to a multi-step process. Many LLM use-cases involve multi-step processing of text. If output (soon to be next-stage input) is sanitized in some way, this could make it more difficult to achieve the input state necessary to subvert the *next* LLM output in the process.
+# Techniques
 
 ## 💬 Paraphrasing
-
-Ask an LLM to paraphrase the prompt while retaining as much detail as possible. Although the injection attack may attempt to trick the paraphrasing step into echoing the initial message, the sophistication required for this could potentially conflict with any subsequent injection strategies.
-
-`🔍Disruption` `🧽Sanitization`
+Ask an LLM to paraphrase the prompt while retaining as much detail as possible. 
+`🔁 Active` `⚠️ Reactive` `📤 Output-focused` `🌐 Generic` `🤖 Automated`
 
 ---
 
 ## 🕵️‍♂️ Threat Intel Driven Sanitization
-
-Based on threat intel, write code or Regex patterns that match known injection techniques. Upon detection of matching strings, remove them from the prompt. We should not indicate to the user that the injection has been mitigated as this information could potentially aid attackers.
-
-`🔍Disruption` `🧽Sanitization`
+Based on threat intel, write code or Regex patterns that match known injection techniques and remove them from the prompt.
+`🔁 Active` `🛡️ Preventive` `📥 Input-focused` `🔬 Specific` `🤖 Automated`
 
 ---
 
 ## 🧬 Mutation & Repair
-
-Randomly remove characters from the input prompt and use an LLM to correct any errors in the text. Repeat this process N times. Start this process in parallel multiple times. After sufficient iterations, the repaired portions of a prompt might lose any obscure, likely-to-be injection-related details.
-
-`🔍Disruption` `🧽Sanitization`
+Randomly remove characters from the input prompt and use an LLM to correct any errors in the text, presuming potential loss of injection-related details.
+`🔁 Active` `🛡️ Preventive` `📥 Input-focused` `🌐 Generic` `🤖 Automated`
 
 ---
 
 ## 🔍 Relevance Filtering
-
-Use an LLM to divide up the content of the prompt into a list of details and elucidate its relevance. Filter the elements deemed irrelevant and optionally, confirm whether removing the item would alter the prompt's meaning. The resulting cleaned prompt is effectively a more robust version of the initial one. Applying several layers of these techniques could significantly complicate the task of potential attackers.
-
-`🔍Disruption` `🧽Sanitization`
+Use an LLM to divide up the content of the prompt into a list of essential details, filtering out irrelevant ones. 
+`🔁 Active` `⚠️ Reactive` `📥 Input-focused` `🌐 Generic` `🤖 Automated`
 
 ---
 
 ## 🚧 Type Enforcement
-
-In some cases, we can validate a strict output format for the LLM prompt. Prompt injection attacks often aim to yield remote code execution. Therefore, ensuring a specific output format eliminates many loopholes for potential attackers and limits the attack vectors. 
-
-This technique is particularly useful when translating LLM outputs based on untrusted or tainted inputs into sensitive actions like API calls and commands.
-
-`🔍Disruption` `🧽Sanitization`
+Validate a strict output format for the LLM prompt, ensuring a specific output format thereby eliminating many loopholes for potential attacks. 
+`🚦 Passive` `🛡️ Preventive` `📤 Output-focused` `🔬 Specific` `👥 Manual`
 
 ---
 
 ## 🎯 Fine-tuned or RAG-assisted Injection Characterization
-
-An LLM prompt containing information about common prompt injection methods can aid in identifying signs of these techniques. Using Retrieval Augmented Generation (RAG) or models fine-tuned for particular techniques can enhance this process. 
-
-`🔍Disruption` `🧽Sanitization`
+An LLM prompt containing information about common injection methods can aid in identifying signs of these techniques. 
+`🔁 Active` `🧠 Predictive` `📤 Output-focused` `🔬 Specific` `👥 Manual`
 
 ---
 
 ## 🌈 Model Diversification
-
-Introduce diversity by incorporating different LLM models. If two models provide diametrically opposite outputs in sentiment analysis, we can consider rejecting the prompt or retrying until the outputs are similar. This technique can work as a mitigation layer or to improve the other mitigation layers.
-
-`🔍Disruption` `🧽Sanitization`
+Introduce diversity by incorporating different LLM models, and reject the prompt or retry until the outputs are similar. 
+`🔁 Active` `⚠️ Reactive` `📤 Output-focused` `🌐 Generic` `🤖 Automated`
