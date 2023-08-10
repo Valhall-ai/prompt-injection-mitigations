@@ -1,5 +1,16 @@
 # 🛡️ Prompt Injection Mitigations
+
 A collection of prompt injection mitigation techniques.
+
+#But First, Some Words of Warning
+
+**Disclaimer:** [*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd) 
+
+> “At a broader level, the core issue is that, contrary to standard security best practices, ‘control’ and ‘data’ planes are not separable when working with LLMs.” - [Rich Harang](https://www.linkedin.com/in/richharang/), Principal Security Architect (AI/ML) @ NVIDIA
+
+Or as I put it: *Prompt Injection Mitigation is Futile.* That might seem like a strong statement coming from someone compiling a list of mitigation techniques, but I think it's extremely important that we stress this truth to all software engineers. These mitigations are not fix-alls. The only safe way to handle untrusted user input passed to an LLM is to not trust the output. Consider the output to be toxic waste, only ever to be fed back to the user who prompted it, or their trusted group.
+
+It is possible that the mitigations outlined here might prove to be robust. Perhaps. But if software engineers allow that resulting percption of safety to be the primary defense mode of their applications rather than doing the harder work of adhering to clear trust boundaries in their code, the software supply chain will suffer for it. Sooner or later. And since the mitigations will be packaged into a few distinct software suits and re-used by countless projects, a single clever mitigation bypass technique will result in widespread exploitation, similar to the Log4Shell security crisis.
 
 ---
 
