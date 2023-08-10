@@ -14,7 +14,7 @@ I repeat: *Prompt Injection Mitigation is Futile.* That might seem like a strong
 
 It is possible that the mitigations outlined here might prove to be robust. *Perhaps.*
 
-But if software engineers allow that resulting perception of safety to be the primary defense mode of their applications rather than doing the harder work of adhering to clear trust boundaries in their code, the software supply chain will suffer for it. Sooner or later. And since the mitigations will be packaged into a few distinct software suits and re-used by countless projects, a single clever mitigation bypass technique will result in widespread exploitation, similar to the Log4Shell security crisis.
+But if software engineers allow that resulting perception of safety to be the primary defense mode of their applications rather than doing the harder work of adhering to clear trust boundaries in their code, the software supply chain will suffer for it sooner or later. And since the mitigations will be packaged into a few distinct software suites and re-used by countless projects, a single clever mitigation bypass technique will result in widespread exploitation, similar to the Log4Shell security crisis.
 
 ---
 
