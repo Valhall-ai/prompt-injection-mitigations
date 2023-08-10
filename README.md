@@ -1,6 +1,6 @@
 # 🛡️ Prompt Injection Mitigations
 
-A collection of prompt injection mitigation techniques.
+A comprehensive collection of prompt injection mitigation techniques and suites.
 
 # But First, Some Words of Warning...
 
@@ -94,3 +94,15 @@ Generic techniques can be applied broadly to tackle different types of attacks w
 
 ## 🤖 Automated vs 👥 Manual
 Automated mitigation will continue working with no human intervention whereas manual mitigation techniques require human intervention on a continuous basis, for example to introduce new threat signatures.
+
+---
+
+# Mitigation Suites:
+
+## Rebuff.ai
+
+"Rebuff is designed to protect AI applications from prompt injection (PI) attacks through a multi-layered defense."
+
+---
+
+This is an early draft and feature-incomplete document. Contributions are welcome. I can be contacted for discussion [here](https://www.linkedin.com/in/jonathanktodd/).
