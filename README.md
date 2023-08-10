@@ -4,7 +4,7 @@ A comprehensive collection of prompt injection mitigation techniques and suites.
 
 # But First, Some Words of Warning...
 
-> "[*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd)" - [Jonathan Todd](https://www.linkedin.com/in/jonathanktodd/), me.
+> "[*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd)" - [Jonathan Todd](https://www.linkedin.com/in/jonathanktodd/), me
 
 But don't just take it from me:
 
@@ -94,6 +94,14 @@ Generic techniques can be applied broadly to tackle different types of attacks w
 
 ## 🤖 Automated vs 👥 Manual
 Automated mitigation will continue working with no human intervention whereas manual mitigation techniques require human intervention on a continuous basis, for example to introduce new threat signatures.
+
+---
+
+# Relevant Literature
+
+- [Universal and Transferable Adversarial Attacks on Aligned Language Models](https://llm-attacks.org/) - Zou et al.
+- [A LLM Assisted Exploitation of AI-Guardian](https://arxiv.org/abs/2307.15008) - Nicholas Carlini, Google DeepMind
+- [A Complete List of All (arXiv) Adversarial Example Papers](https://nicholas.carlini.com/writing/2019/all-adversarial-example-papers.html) - Carlini
 
 ---
 
