@@ -24,15 +24,13 @@ Randomly remove characters from the input prompt and use an LLM to correct any e
 
 
 ## 🔍 Relevance Filtering
-Use an LLM to divide up the content of the prompt into a list of details and elucidate its relevance. Filter the elements deemed irrelevant and optionally, confirm whether removing the item would alter the prompt's meaning. The resulting cleaned prompt is effectively a more robust version of the initial one. Applying several layers of these techniques could significantly complicate the task of potential attackers.
+Many injection attacks involve odd and seemingly irrelevant strings of text. Use an LLM to divide up the content of the prompt into a list of details and assess each items relevance. Filter the elements deemed irrelevant confirm whether removing each item would alter the prompt's meaning. Remove irrelevant components. The resulting cleaned prompt is effectively a more robust version of the initial one, which might exclude certain oddities added by attackers and avoid their effect.
 
 `🔁 Active` `📥 Input-focused` `🌐 Generic` `🤖 Automated` `🕰️ High Time Overhead` `💰 High Cost`
 
 
 ## 🚧 Type Enforcement
-In some cases, we can validate a strict output format for the LLM prompt. Prompt injection attacks often aim to yield remote code execution. Therefore, ensuring a specific output format eliminates many loopholes for potential attackers and limits the attack vectors. 
-
-This technique is particularly useful when translating LLM outputs based on untrusted or tainted inputs into sensitive actions like API calls and commands. 
+In some cases, we can validate a strict output format for the LLM prompt. Prompt injection attacks often aim to yield remote code execution. Therefore, ensuring a specific output format eliminates many loopholes for potential attackers and limits the attack vectors. This technique is particularly useful when translating LLM outputs based on untrusted or tainted inputs into sensitive actions like API calls and commands. 
 
 `🚦 Passive` `🛡️ Preventive` `📤 Output-focused` `🌐 Generic` `👥 Manual` `⚡ Low Time Overhead` `💲 Low Cost`
 
