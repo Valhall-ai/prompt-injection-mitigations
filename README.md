@@ -97,9 +97,9 @@ Automated mitigation will continue working with no human intervention whereas ma
 
 ---
 
-# Mitigation Suites:
+# Free & Open Source Mitigation Suites:
 
-## Rebuff.ai
+### [Rebuff.ai](https://github.com/protectai/rebuff)
 
 "Rebuff is designed to protect AI applications from prompt injection (PI) attacks through a multi-layered defense."
 
