@@ -4,7 +4,7 @@ A comprehensive collection of prompt injection mitigation techniques and suites.
 
 # But First, Some Words of Warning...
 
-> "[*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd)" - [Jonathan Todd (Me)](https://www.linkedin.com/in/jonathanktodd/)
+> "[*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd)" - [Jonathan Todd](https://www.linkedin.com/in/jonathanktodd/), me.
 
 But don't just take it from me:
 
@@ -105,4 +105,4 @@ Automated mitigation will continue working with no human intervention whereas ma
 
 ---
 
-This is an early draft and feature-incomplete document. Contributions are welcome. I can be contacted for discussion [here](https://www.linkedin.com/in/jonathanktodd/).
+This is an early draft and feature-incomplete document. Contributions are welcome. I can be contacted for discussion [here](https://www.linkedin.com/in/jonathanktodd/). *Views and opinions expressed here are my own and do not represent those of my employer.*
