@@ -44,7 +44,7 @@ An LLM prompt containing information about common prompt injection methods can a
 
 
 ## 🌈 Model Diversification
-Introduce diversity by incorporating different LLM models. If two models provide diametrically opposite outputs in sentiment analysis, we can consider rejecting the prompt or retrying until the outputs are similar. This technique can work as a mitigation layer or to improve the other mitigation layers. 
+Introduce diversity by incorporating different LLM models. If two models provide diametrically opposite outputs in sentiment analysis, we can consider rejecting the prompt or retrying until the outputs are similar. This technique may detect instances where an injection attack subverts one model, but fails to subvert another, resulting in diametrically opposite outputs. 
 
 `🚦 Passive` `⚠️ Reactive` `📤 Output-focused` `🌐 Generic` `🤖 Automated` `⚡ Low Time Overhead` `💰 High Cost`
 
