@@ -1,6 +1,6 @@
 # 🛡️ Prompt Injection Mitigations
 
-A comprehensive collection of prompt injection mitigation techniques and suites.
+A comprehensive collection of prompt injection mitigation techniques and suites. (Rough draft)
 
 # But First, Some Words of Warning...
 
