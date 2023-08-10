@@ -2,9 +2,9 @@
 
 A collection of prompt injection mitigation techniques.
 
-#But First, Some Words of Warning
+# But First, Some Words of Warning...
 
-**Disclaimer:** [*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd) 
+[*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd) 
 
 > “At a broader level, the core issue is that, contrary to standard security best practices, ‘control’ and ‘data’ planes are not separable when working with LLMs.” - [Rich Harang](https://www.linkedin.com/in/richharang/), Principal Security Architect (AI/ML) @ NVIDIA
 
