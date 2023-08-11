@@ -28,7 +28,7 @@ In most LLM use-cases, it is feasible to side-step any need for injection mitiga
 
 That said, there are certain use-cases where this is less straight-forward:
 
-- **The Poisoned Well Problem:** Input thought to be trusted might have inadvertently become tainted. For example, perhaps a user sets their username to a prompt injection attack. Untrusted input, sure, but through some process, maybe via a reporting process, their info is attached to an email. Somehow that becomes a PDF. Incidentally, that file gets absorbed into your org's internal vector database. And finally, your org deploys an LLM-integrated system internally to explore that database for data categorization or processing or whatever the case may be. Now you're exposing a potentially privileged LLM-integrated application to a poisoned data source incorrectly assumed to be trustworthy. 
+- **The Poisoned Well Problem:** Input thought to be trusted might have inadvertently become tainted. For example, perhaps a user sets their username to a prompt injection attack. Untrusted input, sure, but somehow, maybe via a reporting process, their info is attached to an email. Somehow that becomes a PDF. Incidentally, that file gets absorbed into your org's internal vector database. And finally, your org deploys an LLM-integrated system internally to explore that database for data categorization or processing or whatever the case may be. Now you're exposing a potentially privileged LLM-integrated application to a poisoned data source incorrectly assumed to be trustworthy. 
 
 - **The AI Assistant Dillema:** Your team wants to develop an LLM-integrated autonomous AI assistant. This assistant is highly robust. It can write and execute code for the user. It can schedule appointments and make purchases on their behalf. It can log into and control their online accounts. The user asks it to browse the web to find something. It encounters a poisoned search result and poof. Pwned.
 
@@ -38,7 +38,7 @@ Therefore, these mitigations should really just be a matter of:
 
 - **Quality Control**: Protect the user from being shown an inappropriate output triggered by some poisoned assets their AGI assistant encountered on the web. 
 
-- **Defense in Depth**: If we assume the software engineers will fail to fully sandbox / wall the gardens properly in LLM-integrated applications (and they will), depending on the risk involved, it might be prudent in certain use-cases to deploy these mitigation techniques.
+- **Defense in Depth**: If we assume software engineers will sometimes fail to fully sandbox untrusted I/O in LLM-integrated applications (and they will), depending on the risk involved, it might be prudent in certain use-cases to deploy these mitigation techniques.
 
 ---
 
