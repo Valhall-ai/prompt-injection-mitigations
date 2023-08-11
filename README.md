@@ -1,4 +1,4 @@
-# 🛡️ Prompt Injection Mitigations
+# 🛟 Prompt Injection Mitigations
 
 A comprehensive collection of prompt injection mitigation techniques, literature, and software suites. \(Rough draft\)
 
