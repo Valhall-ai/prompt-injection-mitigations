@@ -2,7 +2,7 @@
 
 A comprehensive collection of prompt injection mitigation techniques and suites. \(Rough draft\)
 
-# But First, Some Words of Warning...
+# ⚠️ But First, Some Words of Warning...
 
 These mitigation techniques should be a last resort, never to be heavily relied on or treated as a catch-all. They will fail.
 
@@ -22,7 +22,7 @@ And besides those considerations, many of these mitigations come with significan
 
 ---
 
-# Walled Garden Sandboxing
+# 🏰 The Walled Gardens (Sandbox) Solution
 
 In most LLM use-cases, it is feasible to side-step any need for injection mitigations by "walling off" program states tainted by intrusted I/O. In other words, software should be designed in such a way that the only users that could be affectes by their own input are themselves or users who've established trust relationships with them.
 
@@ -42,13 +42,13 @@ Therefore, these mitigations should really just be a matter of:
 
 ---
 
-# Layered Defense
+# 🛡️ Layered Defense
 
 Each technique listed in this document will be susceptible to bypass, but by layering many of them we convolute and add complexity to the attacker's search space of possible bypasses in the hope of reaching successful mitigation. Multi-layered defense is nothing new in the cybersecurity realm, but it's particularly prevalent here due to the fundamentally unsolvable nature of the problem. The only hope of success in the LLM prompt injection mitigation wndeavor is to combine many of these techniques.
 
 ---
 
-# Techniques
+# 📘 Techniques
 
 ## 💬 Paraphrasing
 Ask an LLM to paraphrase the prompt while retaining as much detail as possible. Although the injection attack may attempt to trick the paraphrasing step into echoing the initial message, the sophistication required for this could potentially conflict with any subsequent injection strategies. 
@@ -127,7 +127,7 @@ Automated mitigation will continue working with no human intervention whereas ma
 
 ---
 
-# Relevant Literature
+# 📜 Relevant Literature
 
 - [Universal and Transferable Adversarial Attacks on Aligned Language Models](https://llm-attacks.org/) - Zou et al.
 - [A LLM Assisted Exploitation of AI-Guardian](https://arxiv.org/abs/2307.15008) - Nicholas Carlini, Google DeepMind
@@ -135,7 +135,7 @@ Automated mitigation will continue working with no human intervention whereas ma
 
 ---
 
-# Free & Open Source Mitigation Suites:
+# 🛠️ Free & Open Source Mitigation Suites:
 
 ### [Rebuff.ai](https://github.com/protectai/rebuff)
 
