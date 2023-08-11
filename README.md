@@ -22,7 +22,7 @@ And besides those considerations, many of these mitigations come with significan
 
 ---
 
-# 🏰 The Walled Gardens (Sandbox) Solution
+# 🏰 The "Many Walled Gardens" Solution
 
 In most LLM use-cases, it is feasible to side-step any need for injection mitigations by "walling off" program states tainted by untrusted I/O. In other words, software should be designed in such a way that the only users that could be affected by their own input are themselves or users who've established trust relationships with them.
 
