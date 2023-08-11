@@ -18,6 +18,14 @@ It is possible that the mitigations outlined here might prove to be robust. *Per
 
 But if software engineers allow that resulting perception of safety to be the primary defense mode of their applications rather than doing the harder work of adhering to clear trust boundaries in their code, the software supply chain will suffer for it sooner or later. And since the mitigations will be packaged into a few distinct software suites and re-used by countless projects, a single clever mitigation bypass technique will result in widespread exploitation, similar to the Log4Shell security crisis.
 
+And besides those considerations, many of these mitigations come with significant time and cost trade-offs. You want to avoid leveraging them in your peoduct if you can help it.
+
+---
+
+# Layered Defense
+
+Each technique listed in this document will be susceptible to bypass, but by layering many of them we convolute and add complexity to the attacker's search space of possible bypasses in the hope of reaching successful mitigation. Multi-layered defense is nothing new in the cybersecurity realm, but it's particularly prevalent here due to the fundamentally unsolvable nature of the problem. The only hope of success in the LLM prompt injection mitigation wndeavor is to combine many of these techniques.
+
 ---
 
 # Techniques
