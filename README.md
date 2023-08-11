@@ -4,13 +4,15 @@ A comprehensive collection of prompt injection mitigation techniques and suites.
 
 # But First, Some Words of Warning...
 
-> "[*Prompt Injection Mitigation is Futile.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd)" - [Jonathan Todd](https://www.linkedin.com/in/jonathanktodd/), me
+These mitigation techniques should be a last resort, and never heavily relied on. They will fail.
+
+> "It is impossible to concisely capture in words how complex and blurry of a trust boundary this is. We have allowed the user input to be the trust boundary. It's the equivalent of offering the attacker remote code execution and then trying to parse the code to make sure it doesn't do anything bad. That's absurd." - [Jonathan Todd](https://www.linkedin.com/in/jonathanktodd/) (me), [*The Prompt Injection Mitigation Problem is Never Going Away.*](https://www.linkedin.com/pulse/prompt-injection-mitigation-exercise-futility-jonathan-todd)
 
 But don't just take it from me:
 
 > “At a broader level, the core issue is that, contrary to standard security best practices, ‘control’ and ‘data’ planes are not separable when working with LLMs.” - [Rich Harang](https://www.linkedin.com/in/richharang/), Principal Security Architect (AI/ML) @ NVIDIA
 
-I repeat: *Prompt Injection Mitigation is Futile.* That might seem like a strong statement coming from someone compiling a list of mitigation techniques, but I think it's extremely important that we stress this truth to all software engineers. These mitigations are not fix-alls. The only safe way to handle untrusted user input passed to an LLM is to not trust the output. Consider the output to be toxic waste, only ever to be allowed to impact the user who prompted it or their trusted group.
+*"Prompt Injection Mitigation is Futile."* That might seem like a strong statement coming from someone compiling a list of mitigation techniques, but I think it's extremely important that we stress this truth to all software engineers. These mitigations are not fix-alls. The only safe way to handle untrusted user input passed to an LLM is to not trust the output. Consider the output to be toxic waste, only ever to be allowed to impact the user who prompted it or their trusted group.
 
 It is possible that the mitigations outlined here might prove to be robust. *Perhaps.*
 
