@@ -18,7 +18,27 @@ It is possible that the mitigations outlined here might prove to be robust. *Per
 
 But if software engineers allow that resulting perception of safety to be the primary defense mode of their applications rather than doing the harder work of adhering to clear trust boundaries in their code, the software supply chain will suffer for it sooner or later. And since the mitigations will be packaged into a few distinct software suites and re-used by countless projects, a single clever mitigation bypass technique will result in widespread exploitation, similar to the Log4Shell security crisis.
 
-And besides those considerations, many of these mitigations come with significant time and cost trade-offs. You want to avoid leveraging them in your peoduct if you can help it.
+And besides those considerations, many of these mitigations come with significant time and cost trade-offs. You want to avoid leveraging them in your product if you can help it.
+
+---
+
+# Walled Garden Sandboxing
+
+In most LLM use-cases, it is feasible to side-step any need for injection mitigations by "walling off" program states tainted by intrusted I/O. In other words, software should be designed in such a way that the only users that could be affectes by their own input are themselves or users who've established trust relationships with them.
+
+That said, there are certain use-cases where this is less straight-forward:
+
+- **The Poisoned Well Problem:** Input thought to be trusted might have inadvertently become tainted. For example, perhaps a user sets their username to a prompt injection attack. Untrusted input, sure, but through some process, maybe via a reporting process, their info is attached to an email. Somehow that becomes a PDF. Incidentally, that file gets absorbed into your org's internal vector database. And finally, your org deploys an LLM-integrated system internally to explore that database for data categorization or processing or whatever the case may be. Now you're exposing a potentially privileged LLM-integrated application to a poisoned data source incorrectly assumed to be trustworthy. 
+
+- **The AI Assistant Dillema:** Your team wants to develop an LLM-integrated autonomous AI assistant. This assistant is highly robust. It can write and execute code for the user. It can schedule appointments and make purchases on their behalf. It can log into and control their online accounts. The user asks it to browse the web to find something. It encounters a poisoned search result and poof. Pwned.
+
+These scenarios aren't as incredibly bleak as they might initially appear. Before relying on prompt injection mitigation techniques, the software engineer can deploy sub-sandoxes. Walled gardens within the walled garden. Put simply: The potentially tainted LLM prompt outputs can be used in a limited way, but not trusted. Not allowed to influence sensitive actions.
+
+Therefore, these mitigations should really just be a matter of:
+
+- **Quality Control**: Protect the user from being shown an inappropriate output triggered by some poisoned assets their AGI assistant encountered on the web. 
+
+- **Defense in Depth**: If we assume the software engineers will fail to fully sandbox / wall the gardens properly in LLM-integrated applications (and they will), depending on the risk involved, it might be prudent in certain use-cases to deploy these mitigation techniques.
 
 ---
 
