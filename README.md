@@ -2,7 +2,7 @@
 
 A comprehensive collection of prompt injection mitigation techniques, literature, and software suites. \(Rough draft\)
 
-# ⚠️ But First, Some Words of Warning...
+# ⚠️ But First, A Few Words of Warning...
 
 These mitigation techniques should be a last resort, never to be heavily relied on or treated as a catch-all. They will fail.
 
