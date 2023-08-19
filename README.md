@@ -69,7 +69,7 @@ Leverage the often incoherent nature of prompt injection strings against the att
 
 
 ## 🔍 Relevance Filtering
-Many injection attacks involve odd and seemingly irrelevant strings of text. Use an LLM to divide up the content of the prompt into a list of details and assess each items relevance. Filter the elements deemed irrelevant confirm whether removing each item would alter the prompt's meaning. Remove irrelevant components. The resulting cleaned prompt is effectively a more robust version of the initial one, which might exclude certain oddities added by attackers and avoid their effect.
+Many injection attacks involve odd and seemingly irrelevant strings of text. Use an LLM to divide up the content of the prompt into a list of details and assess each item's relevance. Filter the elements deemed irrelevant confirm whether removing each item would alter the prompt's meaning. Remove irrelevant components. The resulting cleaned prompt is effectively a more robust version of the initial one, which might exclude certain oddities added by attackers and avoid their effect.
 
 `🔁 Active` `📥 Input-focused` `🌐 Generic` `🤖 Automated` `🕰️ High Time Overhead` `💰 High Cost`
 
